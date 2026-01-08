@@ -1,6 +1,6 @@
 # Crunchbase Scraper
 
-[![Bright Data Promo](https://github.com/luminati-io/LinkedIn-Scraper/raw/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.co.kr/products/web-scraper/crunchbase)
+[![Bright Data Promo](https://github.com/bright-kr/LinkedIn-Scraper/raw/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.co.kr/products/web-scraper/crunchbase)
 
 이 저장소는 Crunchbase에서 비즈니스 인텔리전스 데이터를 추출하기 위한 두 가지 접근 방식을 제공합니다:
 
@@ -30,7 +30,7 @@
 
 Crunchbase 프로필에서 기본적인 회사 데이터를 추출하는 방법을 보여주는 Python 구현입니다.
 
-<img width="800" alt="Bright Data Platform Interface" src="https://github.com/luminati-io/crunchbase-scraper/blob/main/images/440236063-03b5a4c6-ba43-4595-bab8-96161740e197.png" />
+<img width="800" alt="Bright Data Platform Interface" src="https://github.com/bright-kr/crunchbase-scraper/blob/main/images/440236063-03b5a4c6-ba43-4595-bab8-96161740e197.png" />
 
 ### Features
 
@@ -49,7 +49,7 @@ Crunchbase 프로필에서 기본적인 회사 데이터를 추출하는 방법�
 
 ### Implementation
 
-1. **코드 가져오기:** 스크립트 파일은 여기에서 확인합니다: [free-crunchbase-scraper/crunchbase-scraper.py](https://github.com/luminati-io/crunchbase-scraper/blob/main/free-crunchbase-scraper/crunchbase-scraper.py)
+1. **코드 가져오기:** 스크립트 파일은 여기에서 확인합니다: [free-crunchbase-scraper/crunchbase-scraper.py](https://github.com/bright-kr/crunchbase-scraper/blob/main/free-crunchbase-scraper/crunchbase-scraper.py)
 2. **대상 URL 설정:** 스크립트를 열고 `target_url` 변수를 스クレイピング하려는 특정 Crunchbase 회사 프로필로 수정합니다.
     
     ```python
@@ -95,7 +95,7 @@ Crunchbase 프로필에서 기본적인 회사 데이터를 추출하는 방법�
 - **IP 차단 및 レート制限:** Crunchbase는 개별 IPアドレス에서 발생하는 リクエスト를 적극적으로 모니터링하고 제한합니다. 몇 차례 スクレイピング 시도 후 IP가 빠르게 차단될 가능성이 큽니다.
 - **정교한 アンチボット 대책:** Crunchbase는 CAPTCHAs(예: [Cloudflare Turnstile](https://brightdata.co.kr/products/web-unlocker/captcha-solver/cloudflare-turnstile)) 및 행동 분석을 포함한 고급 보안을 사용하며, 자동화 스크립트를 탐지하고 차단하도록 특별히 설계되어 있습니다.
 
-  <img width="800" alt="Crunchbase CAPTCHA Challenge" src="https://github.com/luminati-io/crunchbase-scraper/blob/main/images/440239044-44cb5a79-e943-454b-9354-28b78ef67b57.png" />
+  <img width="800" alt="Crunchbase CAPTCHA Challenge" src="https://github.com/bright-kr/crunchbase-scraper/blob/main/images/440239044-44cb5a79-e943-454b-9354-28b78ef67b57.png" />
 
 - **동적 웹사이트 구조:** Crunchbase는 웹사이트 레이아웃과 코드를 자주 업데이트합니다. 어떤 변경이든 스크립트를 깨뜨릴 수 있어 지속적이고 시간 소모적인 유지보수가 필요합니다.
 - **확장성 문제:** 이 방법은 여러 URL을 효율적으로 처리하거나 대량의 데이터를 처리하도록 확장할 수 없습니다.
@@ -122,7 +122,7 @@ Crunchbase 프로필에서 기본적인 회사 데이터를 추출하는 방법�
 1. **계정 생성:** [Bright Data account](https://brightdata.co.kr/)에 가입합니다 *(신규 사용자는 결제 수단을 추가하면 $5 크레딧을 받습니다)*.
 2. **API 토큰 생성:** 대시보드에서 고유한 [API key](https://docs.brightdata.com/general/account/api-token)를 발급받습니다.
 3. **구현 가이드:** 두 API 방법과 No-Code 인터페이스 모두에 대한 상세 구성 단계는 다음을 참조하십시오:
-[setup-bright-data-crunchbase-scraper.md](https://github.com/luminati-io/crunchbase-scraper/blob/main/setup-bright-data-crunchbase-scraper.md)
+[setup-bright-data-crunchbase-scraper.md](https://github.com/bright-kr/crunchbase-scraper/blob/main/setup-bright-data-crunchbase-scraper.md)
 
 
 ### API Methods
@@ -155,7 +155,7 @@ config = {
 
 - `"YOUR_API_TOKEN"`을 실제 Bright Data API 토큰으로 교체하십시오.
 - `organizations` 목록을 대상 Crunchbase URL로 수정하십시오.
-- 실행 가능한 전체 스크립트는 여기에서 확인하십시오: [crunchbase-scraper-api/crunchbase-profile-fetcher.py](https://github.com/luminati-io/crunchbase-scraper/blob/main/crunchbase-scraper-api/crunchbase-profile-fetcher.py)
+- 실행 가능한 전체 스크립트는 여기에서 확인하십시오: [crunchbase-scraper-api/crunchbase-profile-fetcher.py](https://github.com/bright-kr/crunchbase-scraper/blob/main/crunchbase-scraper-api/crunchbase-profile-fetcher.py)
 
 **요청 예시 (cURL):**
 
@@ -198,13 +198,13 @@ API는 포괄적이고 구조화된 데이터를 반환합니다. 아래는 단�
 }
 ```
 
-전체 샘플 응답 보기: [crunchbase-data/crunchbase-company-profiles.json](https://github.com/luminati-io/crunchbase-scraper/blob/main/crunchbase-data/crunchbase-company-profiles.json)
+전체 샘플 응답 보기: [crunchbase-data/crunchbase-company-profiles.json](https://github.com/bright-kr/crunchbase-scraper/blob/main/crunchbase-data/crunchbase-company-profiles.json)
 
 ### B. Discover Crunchbase Data by Keyword
 
 특정 키워드 또는 산업(예: "AI", "Venture Capital", "SaaS")과 연관된 회사를 식별합니다.
 
-<img width="800" alt="Discover by Keyword Interface Example" src="https://github.com/luminati-io/crunchbase-scraper/blob/main/images/440271152-56e59e94-19fa-4977-84a0-4b70c794cb20.png" />
+<img width="800" alt="Discover by Keyword Interface Example" src="https://github.com/bright-kr/crunchbase-scraper/blob/main/images/440271152-56e59e94-19fa-4977-84a0-4b70c794cb20.png" />
 
 **입력 파라미터:**
 
@@ -230,7 +230,7 @@ config = {
 
 - `"YOUR_API_TOKEN"`을 교체하십시오.
 - `keywords` 목록을 수정하십시오.
-- 실행 가능한 전체 스크립트는 여기에서 확인하십시오: [`crunchbase-scraper-api/crunchbase-keyword-search.py`](https://github.com/luminati-io/crunchbase-scraper/blob/main/crunchbase-scraper-api/crunchbase-keyword-search.py)
+- 실행 가능한 전체 스크립트는 여기에서 확인하십시오: [`crunchbase-scraper-api/crunchbase-keyword-search.py`](https://github.com/bright-kr/crunchbase-scraper/blob/main/crunchbase-scraper-api/crunchbase-keyword-search.py)
 
 **요청 예시 (cURL):**
 
@@ -272,7 +272,7 @@ curl -X POST \
 }
 ```
 
-전체 샘플 응답 보기: [crunchbase-data/crunchbase-keyword-results.json](https://github.com/luminati-io/crunchbase-scraper/blob/main/crunchbase-data/crunchbase-keyword-results.json)
+전체 샘플 응답 보기: [crunchbase-data/crunchbase-keyword-results.json](https://github.com/bright-kr/crunchbase-scraper/blob/main/crunchbase-data/crunchbase-keyword-results.json)
 
 ### API Configuration & Delivery Options
 
@@ -296,7 +296,7 @@ Web Scraper API 및 수집 트리거에 대한 종합 문서는 다음을 참조
 
 ### No-Code Scraper Interface
 
-시각적 포인트앤클릭 방식을 선호하는 사용자를 위해 Bright Data는 [No-Code Scraper](https://brightdata.co.kr/products/web-scraper/no-code)도 제공합니다. 이 인터페이스를 사용하면 코드를 작성하지 않고도 동일한 강력한 기반 인프라를 활용하여 Crunchbase 데이터 수집 작업을 구성하고 실행할 수 있습니다. 안내는 [Setup Guide](https://github.com/luminati-io/crunchbase-scraper/blob/main/setup-bright-data-crunchbase-scraper.md)를 참조하십시오.
+시각적 포인트앤클릭 방식을 선호하는 사용자를 위해 Bright Data는 [No-Code Scraper](https://brightdata.co.kr/products/web-scraper/no-code)도 제공합니다. 이 인터페이스를 사용하면 코드를 작성하지 않고도 동일한 강력한 기반 인프라를 활용하여 Crunchbase 데이터 수집 작업을 구성하고 실행할 수 있습니다. 안내는 [Setup Guide](https://github.com/bright-kr/crunchbase-scraper/blob/main/setup-bright-data-crunchbase-scraper.md)를 참조하십시오.
 
 ## Alternative: Pre-Collected Crunchbase Datasets
 
@@ -321,5 +321,5 @@ Web Scraper API 및 수집 트리거에 대한 종합 문서는 다음을 참조
 - **Guides & Blog Posts:**
     - [How to Scrape Crunchbase (Comprehensive Guide)](https://brightdata.co.kr/blog/web-data/how-to-scrape-crunchbase)
     - [Web Scraping Without Getting Blocked](https://brightdata.co.kr/blog/web-data/web-scraping-without-getting-blocked)
-    - [Setup Guide for Bright Data Crunchbase Scraper (in this repo)](https://github.com/luminati-io/crunchbase-scraper/blob/main/setup-bright-data-crunchbase-scraper.md)
+    - [Setup Guide for Bright Data Crunchbase Scraper (in this repo)](https://github.com/bright-kr/crunchbase-scraper/blob/main/setup-bright-data-crunchbase-scraper.md)
 - **Technical Support:** 계정 대시보드를 통해 24/7 Bright Data 지원팀에 문의하거나 [support@brightdata.com](mailto:support@brightdata.com)으로 이메일을 보내실 수 있습니다.
