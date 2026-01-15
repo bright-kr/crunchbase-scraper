@@ -4,7 +4,7 @@
 
 이 저장소는 Crunchbase에서 비즈니스 인텔리전스 데이터를 추출하기 위한 두 가지 접근 방식을 제공합니다:
 
-1. **기본 スクレイピング 스크립트:** 제한된 데이터 수집을 위한 경량의 브라우저 자동화 スクレイピング 도구입니다.
+1. **기본 스크레이핑 스크립트:** 제한된 데이터 수집을 위한 경량의 브라우저 자동화 스크레이핑 도구입니다.
 2. **Bright Data Crunchbase Scraper API:** 대용량 및 신뢰할 수 있는 데이터 추출을 위한 견고하고 확장 가능하며 유지보수가 필요 없는 솔루션입니다.
 
 ## Table of Contents
@@ -92,8 +92,8 @@ Crunchbase 프로필에서 기본적인 회사 데이터를 추출하는 방법�
 
 이 접근 방식은 프로덕션 규모 데이터 수집에는 부적합하게 만드는 심각한 [web scraping challenges](https://brightdata.co.kr/blog/web-data/web-scraping-challenges)에 직면합니다:
 
-- **IP 차단 및 レート制限:** Crunchbase는 개별 IPアドレス에서 발생하는 リクエスト를 적극적으로 모니터링하고 제한합니다. 몇 차례 スクレイピング 시도 후 IP가 빠르게 차단될 가능성이 큽니다.
-- **정교한 アンチボット 대책:** Crunchbase는 CAPTCHAs(예: [Cloudflare Turnstile](https://brightdata.co.kr/products/web-unlocker/captcha-solver/cloudflare-turnstile)) 및 행동 분석을 포함한 고급 보안을 사용하며, 자동화 스크립트를 탐지하고 차단하도록 특별히 설계되어 있습니다.
+- **IP 차단 및 속도 제한:** Crunchbase는 개별 IP 주소에서 발생하는 요청를 적극적으로 모니터링하고 제한합니다. 몇 차례 스크레이핑 시도 후 IP가 빠르게 차단될 가능성이 큽니다.
+- **정교한 안티봇 대책:** Crunchbase는 CAPTCHAs(예: [Cloudflare Turnstile](https://brightdata.co.kr/products/web-unlocker/captcha-solver/cloudflare-turnstile)) 및 행동 분석을 포함한 고급 보안을 사용하며, 자동화 스크립트를 탐지하고 차단하도록 특별히 설계되어 있습니다.
 
   <img width="800" alt="Crunchbase CAPTCHA Challenge" src="https://github.com/bright-kr/crunchbase-scraper/blob/main/images/440239044-44cb5a79-e943-454b-9354-28b78ef67b57.png" />
 
@@ -103,14 +103,14 @@ Crunchbase 프로필에서 기본적인 회사 데이터를 추출하는 방법�
 
 
 ## 2. Bright Data Crunchbase Scraper API
-[Bright Data Crunchbase Scraper API](https://brightdata.co.kr/products/web-scraper/crunchbase)는 スクレイピング의 복잡성을 다루지 않고도 Crunchbase에서 포괄적인 데이터를 추출할 수 있는 견고하고 확장 가능하며 번거로움이 없는 방법을 제공합니다.
+[Bright Data Crunchbase Scraper API](https://brightdata.co.kr/products/web-scraper/crunchbase)는 스크레이핑의 복잡성을 다루지 않고도 Crunchbase에서 포괄적인 데이터를 추출할 수 있는 견고하고 확장 가능하며 번거로움이 없는 방법을 제공합니다.
 
 ### Key Benefits
 
-- **기술적 과제 우회:** 고급 プロキシ 로ーテ이션 및 웹 언락킹 기술을 사용하여 IP 차단, CAPTCHAs, レート制限을 자동으로 처리합니다.
+- **기술적 과제 우회:** 고급 프록시 로ーテ이션 및 웹 언락킹 기술을 사용하여 IP 차단, CAPTCHAs, 속도 제한을 자동으로 처리합니다.
 - **엔터프라이즈 확장성:** 대용량 데이터 수집을 위해 설계되었습니다.
 - **높은 신뢰성:** 엔터프라이즈급 가동 시간으로 일관된 데이터 전달을 보장합니다.
-- **개발자 친화적:** 간단한 API 통합으로 복잡한 スクレイピング 도구 개발 및 유지보수가 필요 없습니다.
+- **개발자 친화적:** 간단한 API 통합으로 복잡한 스크레이핑 도구 개발 및 유지보수가 필요 없습니다.
 - **구조화된 데이터 형식:** 분석 준비가 된 깔끔하고 정규화된 데이터를 제공합니다.
 - **규제 준수:** GDPR 및 CCPA를 포함한 데이터 프라이버시 규정을 준수합니다.
 - **유연한 가격:** 성공적인 데이터 전달을 기준으로 하는 종량제 모델입니다.
@@ -281,7 +281,7 @@ API 요청 내 추가 파라미터를 사용하여 데이터 수집 작업을 �
 | Parameter | Type | Description | Example |
 | --- | --- | --- | --- |
 | `limit` | `integer` | 입력( URL 또는 키워드)당 최대 결과 수를 설정합니다. | `limit=50` |
-| `include_errors` | `boolean` | 문제가 발생할 경우 レスポンス에 상세 오류 정보를 포함합니다. | `include_errors=true` |
+| `include_errors` | `boolean` | 문제가 발생할 경우 응답에 상세 오류 정보를 포함합니다. | `include_errors=true` |
 | `format` | `enum` | 원하는 출력 형식(`json`, `csv`, `ndjson`)을 지정합니다. | `format=csv` |
 | `notify` | `url` | 작업 완료 시 알림을 받을 webhook URL을 제공합니다. | `notify=https://...` |
 
@@ -300,13 +300,13 @@ Web Scraper API 및 수집 트리거에 대한 종합 문서는 다음을 참조
 
 ## Alternative: Pre-Collected Crunchbase Datasets
 
-직접 スクレイピング 작업을 실행하지 않고도 대량의 구조화된 Crunchbase 데이터를 즉시 이용해야 한다면, Bright Data의 사전 수집된 [Crunchbase Datasets](https://brightdata.co.kr/products/datasets/crunchbase)를 고려하십시오.
+직접 스크레이핑 작업을 실행하지 않고도 대량의 구조화된 Crunchbase 데이터를 즉시 이용해야 한다면, Bright Data의 사전 수집된 [Crunchbase Datasets](https://brightdata.co.kr/products/datasets/crunchbase)를 고려하십시오.
 
 - **즉시 사용 가능:** 검증되고 구조화된 Crunchbase 데이터에 즉시 접근합니다.
-- **포괄적인 커버리지:** データセット에는 회사 프로필당 100개 이상의 데이터 포인트가 포함됩니다.
+- **포괄적인 커버리지:** 데이터셋에는 회사 프로필당 100개 이상의 데이터 포인트가 포함됩니다.
 - **정기 업데이트:** 다양한 데이터 최신성 옵션(일간, 주간, 월간 또는 커스텀) 중에서 선택합니다.
-- **유연한 구매 옵션:** 전체 データセット 또는 요구사항과 예산에 맞춘 특정 서브셋을 구매할 수 있습니다.
-- **쉬운 통합:** API 또는 직접 다운로드로 データセット을 원활하게 통합합니다.
+- **유연한 구매 옵션:** 전체 데이터셋 또는 요구사항과 예산에 맞춘 특정 서브셋을 구매할 수 있습니다.
+- **쉬운 통합:** API 또는 직접 다운로드로 데이터셋을 원활하게 통합합니다.
 - **샘플 데이터 제공:** 데이터 품질과 적합성을 평가할 수 있도록 샘플을 요청할 수 있습니다.
 
 
